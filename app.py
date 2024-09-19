@@ -1,4 +1,4 @@
-from database import add_entry, get_entries
+from database import add_entry, get_entries, close_connection
 
 
 menu = """Please select one of the following options:
@@ -30,3 +30,5 @@ while (user_input := input(menu)) != "3":
         view_entries(get_entries())
     else:
         print("Invalid option, please try again!")
+
+close_connection()
